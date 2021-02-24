@@ -1,0 +1,96 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "number"
+    },
+    "name": {
+      "type": "string"
+    },
+    "username": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "address": {
+      "type": "object",
+      "properties": {
+        "street": {
+          "type": "string"
+        },
+        "suite": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "uglyZipcode": {
+          "type": "string"
+        },
+        "geo": {
+          "type": "object",
+          "properties": {
+            "lat": {
+              "type": "string"
+            },
+            "lng": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "lat",
+            "lng"
+          ]
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "city",
+        "geo",
+        "street",
+        "suite",
+        "uglyZipcode"
+      ]
+    },
+    "phone": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    },
+    "company": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "catchPhrase": {
+          "type": "string"
+        },
+        "bs": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "bs",
+        "catchPhrase",
+        "name"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "address",
+    "company",
+    "email",
+    "id",
+    "name",
+    "phone",
+    "username",
+    "website"
+  ],
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
